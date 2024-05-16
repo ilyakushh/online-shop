@@ -1,0 +1,22 @@
+.header {
+  @apply flex justify-between py-5 items-center;
+}
+
+.nav {
+  @apply flex gap-10 capitalize cursor-pointer;
+}
+
+.logo {
+  font-family: "Ingrid Darling", cursive;
+  @apply text-5xl;
+}
+
+.userTools {
+  @apply flex gap-7 items-center;
+  & button {
+    @apply bg-black text-white px-7 py-2 rounded-lg;
+  }
+  .icon {
+    @apply cursor-pointer text-xl;
+  }
+}
