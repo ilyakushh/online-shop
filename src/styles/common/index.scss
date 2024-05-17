@@ -4,3 +4,23 @@
 
 @import "./reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Ingrid+Darling&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+.swiper-button-next {
+  @apply text-black;
+}
+.swiper-button-prev {
+  @apply text-black;
+}
+
+.swiper-pagination {
+  bottom: -50px;
+}
+.swiper-pagination-bullet {
+  background-color: black;
+  transition: 0.4s all;
+  width: 10px;
+  height: 10px;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
