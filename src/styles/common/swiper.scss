@@ -1,0 +1,14 @@
+.swiper-button-next {
+  @apply text-black;
+}
+.swiper-button-prev {
+  @apply text-black;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-black w-3 h-3;
+  transition: 0.4s all;
+  &:hover {
+    @apply scale-150;
+  }
+}

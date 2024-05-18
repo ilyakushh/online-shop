@@ -1,12 +1,13 @@
 import { useQuery } from "react-query";
 import { fetchGoods } from "../../utils/api";
-import styles from "../../styles/Home.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import styles from "../../styles/Home.module.scss";
 
 const Home = () => {
   const { data, isError, isLoading } = useQuery({
@@ -43,8 +44,12 @@ const Home = () => {
           <SwiperSlide key={data.id} className={styles.item}>
             <img src={data.image} alt="" />
             <div className={styles.itemDesc}>
-              <h5>{data.title}</h5>
-              <span>{data.category}</span>
+              <Link to={`/products/${data.id}`}>
+                <h5>{data.title}</h5>
+              </Link>
+              <Link to={`/categories/${data.category}`}>
+                <span>{data.category}</span>
+              </Link>
               <p>${data.price}</p>
             </div>
           </SwiperSlide>

@@ -23,28 +23,3 @@
     @apply max-w-full max-h-80 object-contain m-auto;
   }
 }
-
-// .home {
-//   @apply grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-x-14 gap-y-10 pt-14;
-// }
-
-// .item {
-//   @apply shadow-lg shadow-slate-700;
-
-//   border-radius: 10px;
-//   text-align: center;
-//   overflow: hidden;
-//   & .itemDesc {
-//     @apply flex flex-col  justify-between flex-grow items-center  min-h-48;
-//     padding: 10px 0;
-//     & h5 {
-//       @apply font-bold;
-//     }
-//   }
-//   & img {
-//     max-width: 100%;
-//     height: 230px;
-//     object-fit: contain;
-//     margin: auto;
-//   }
-// }

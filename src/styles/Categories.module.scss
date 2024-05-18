@@ -1,0 +1,10 @@
+.categories {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-x-14 gap-y-10 py-10;
+}
+
+.item {
+  @apply shadow-lg shadow-slate-700 cursor-pointer rounded-xl text-center overflow-hidden;
+  & img {
+    @apply min-w-full h-56 object-contain m-auto;
+  }
+}
