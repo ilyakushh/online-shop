@@ -5,11 +5,18 @@ import { useQuery } from "react-query";
 import ReactStars from "react-rating-stars-component";
 import { RiHeartLine } from "react-icons/ri";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addtoCart } from "../../redux/slices/cartSlice";
+import { sizes } from "../../data/constants";
 
 const Product = () => {
+  const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [quantity, setQuantity] = useState(1);
 
+  const dispatch = useDispatch();
+
   const { productId } = useParams();
+
   const {
     data: product,
     isLoading,
@@ -26,16 +33,21 @@ const Product = () => {
     return <div>Error occurred!</div>;
   }
 
-  const incrementQuantity = () => {
-    if (quantity < 50) {
-      setQuantity((prev) => prev + 1);
-    }
+  const handleAddtoCart = () => {
+    dispatch(
+      addtoCart({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        size: selectedSize,
+        image: product.image,
+        quantity: quantity,
+      })
+    );
   };
 
-  const decrementQuantity = () => {
-    if (quantity > 1) {
-      setQuantity((prev) => prev - 1);
-    }
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
   };
 
   return (
@@ -56,13 +68,31 @@ const Product = () => {
         </div>
         <p>${product.price}</p>
         <span>{product.description}</span>
+        <div className={styles.size}>
+          <p>Size</p>
+          <div className={styles.sizes}>
+            {sizes.map((size) => (
+              <p
+                onClick={() => handleSizeSelect(size)}
+                className={selectedSize === size ? styles.active : ""}
+                key={size}
+              >
+                {size}
+              </p>
+            ))}
+          </div>
+        </div>
         <div className={styles.cart}>
           <div className={styles.quantity}>
-            <span onClick={decrementQuantity}>-</span>
+            <span onClick={() => quantity > 1 && setQuantity(quantity - 1)}>
+              -
+            </span>
             <p>{quantity}</p>
-            <span onClick={incrementQuantity}>+</span>
+            <span onClick={() => quantity < 50 && setQuantity(quantity + 1)}>
+              +
+            </span>
           </div>
-          <button>Add to Cart</button>
+          <button onClick={handleAddtoCart}>Add to Cart</button>
           <div className={styles.favorites}>
             <RiHeartLine />
           </div>

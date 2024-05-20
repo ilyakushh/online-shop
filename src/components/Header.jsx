@@ -20,7 +20,9 @@ const Header = () => {
       </ul>
       <div className={styles.userTools}>
         <RiSearchLine className={styles.icon} />
-        <RiShoppingCart2Line className={styles.icon} />
+        <Link to="/cart">
+          <RiShoppingCart2Line className={styles.icon} />
+        </Link>
         <Link to="/login">
           <button>Login</button>
         </Link>

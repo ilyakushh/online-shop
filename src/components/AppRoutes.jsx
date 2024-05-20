@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import CategoryPage from "./pages/CategoryPage";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 
 const AppRouter = () => {
   return (
@@ -16,6 +17,7 @@ const AppRouter = () => {
       <Route path="/categories" element={<Categories />} />
       <Route path="/products" element={<Products />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/cart" element={<Cart />} />
       <Route path="/products/:productId" element={<Product />} />
       <Route path="/categories/:slug" element={<CategoryPage />} />
       <Route path="*" element={<NotFound />} />

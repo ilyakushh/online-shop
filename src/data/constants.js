@@ -12,3 +12,5 @@ export const options = [
   { value: "precetohigh", label: "Price (Low to High)" },
   { value: "toprated", label: "Top Rated" },
 ];
+
+export const sizes = ["S", "M", "L", "XL", "XXL"];
