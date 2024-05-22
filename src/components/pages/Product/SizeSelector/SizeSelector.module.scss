@@ -1,0 +1,16 @@
+.sizeSelector {
+  @apply mt-4;
+  & .active {
+    @apply text-white bg-black;
+  }
+  & > p {
+    @apply font-bold;
+  }
+}
+
+.sizes {
+  @apply flex items-center gap-2;
+  & p {
+    @apply h-9 w-9 flex items-center justify-center border border-black rounded-lg cursor-pointer  uppercase;
+  }
+}

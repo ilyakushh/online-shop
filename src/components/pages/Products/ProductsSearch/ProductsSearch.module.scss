@@ -1,0 +1,32 @@
+.productsSearch {
+  @apply flex justify-between;
+}
+
+.searchBar {
+  @apply relative max-w-96 h-16;
+
+  & .icon {
+    @apply absolute top-2/4 left-12 text-xl;
+    transform: translateY(-50%);
+  }
+  & input {
+    @apply outline-none w-full h-full pl-20 rounded-lg;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.select {
+  @apply flex  items-center gap-5;
+  & p {
+    @apply text-xl;
+  }
+}
+
+@media (max-width: 768px) {
+  .productsSearch {
+    @apply flex-col items-center gap-9;
+  }
+  .searchBar {
+    @apply w-full;
+  }
+}

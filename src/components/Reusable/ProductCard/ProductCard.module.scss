@@ -1,0 +1,12 @@
+.productCard {
+  @apply shadow-lg shadow-slate-700 cursor-pointer rounded-xl text-center overflow-hidden;
+  & .itemDesc {
+    @apply flex flex-col justify-between flex-grow items-center  min-h-52 py-3;
+    & p {
+      @apply font-bold;
+    }
+  }
+  & img {
+    @apply min-w-full h-56 object-contain m-auto;
+  }
+}

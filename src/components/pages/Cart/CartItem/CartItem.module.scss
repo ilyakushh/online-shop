@@ -1,0 +1,50 @@
+.cartItem {
+  @apply border-y  p-2 flex gap-4 w-full relative;
+
+  & img {
+    @apply w-28 h-32;
+  }
+  & > p {
+    @apply ml-auto text-xl font-bold self-center;
+    text-overflow: ellipsis;
+  }
+}
+
+.desc {
+  @apply flex flex-col justify-between;
+  & h4 {
+    @apply font-bold text-xl;
+  }
+}
+
+.quantity {
+  font-family: "Courier Prime", monospace;
+  @apply flex items-center  justify-center gap-3 border border-black  rounded-lg max-w-24;
+  & span {
+    @apply text-xl cursor-pointer select-none;
+  }
+  & p {
+    @apply text-xl;
+  }
+}
+
+.icon {
+  @apply absolute top-1 right-1 text-2xl cursor-pointer;
+}
+
+@media (max-width: 768px) {
+  .cartItem {
+    @apply flex-col items-center;
+    & img {
+      @apply w-52 h-auto;
+    }
+  }
+
+  .desc {
+    @apply gap-3 w-full;
+  }
+
+  .icon {
+    @apply text-4xl;
+  }
+}

@@ -28,3 +28,11 @@ button {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.spinner {
+  @apply h-full flex justify-center items-center pt-16;
+}
+
+.error {
+  @apply text-4xl text-center pt-16;
+}

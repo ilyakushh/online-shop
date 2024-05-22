@@ -1,0 +1,23 @@
+@import "../../../../styles/common/index.scss";
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-full z-50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.orderModal {
+  @apply fixed top-1/2 right-1/2 bg-white w-96 h-80 z-20  rounded-lg flex flex-col items-center pt-7 px-4 text-center;
+  transform: translate(50%, -50%);
+  & p {
+    @apply font-bold text-xl mb-4;
+  }
+  & button {
+    @include button-styles;
+    @apply mt-10 uppercase py-2 px-8;
+  }
+}
+
+.icon {
+  @apply text-2xl bg-black text-white w-12 h-12 flex justify-center items-center rounded-full relative z-10 mb-4;
+  box-shadow: 0 0 0 10px rgba(119, 119, 119, 0.5);
+}

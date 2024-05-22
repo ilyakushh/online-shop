@@ -1,0 +1,24 @@
+@import "../../../../styles/common/index.scss";
+
+.productInteraction {
+  @apply flex items-center gap-5 pt-9;
+  & button {
+    @include button-styles;
+    @apply h-11 w-56;
+  }
+}
+
+.quantity {
+  font-family: "Courier Prime", monospace;
+  @apply flex items-center  justify-center gap-4 border border-black w-28 h-11 rounded-lg;
+  & span {
+    @apply text-2xl cursor-pointer select-none;
+  }
+  & p {
+    @apply text-2xl;
+  }
+}
+
+.favorites {
+  @apply h-11 w-11 flex items-center justify-center border border-black rounded-lg cursor-pointer text-xl;
+}

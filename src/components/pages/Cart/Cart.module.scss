@@ -1,0 +1,28 @@
+.cart {
+  @apply relative;
+  & h3 {
+    @apply text-5xl;
+  }
+}
+
+.cartContainer {
+  @apply pt-7 flex justify-between;
+}
+
+.cartItems {
+  @apply flex flex-col gap-3;
+  width: 800px;
+}
+
+.isEmpty {
+  @apply text-5xl flex justify-center pt-10;
+}
+
+@media (max-width: 768px) {
+  .cartContainer {
+    @apply flex-col gap-3 py-5;
+  }
+  .cartItems {
+    @apply w-full;
+  }
+}

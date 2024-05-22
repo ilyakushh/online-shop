@@ -1,0 +1,44 @@
+@import "../../../../styles/common/index.scss";
+
+.totalPrice {
+  @apply w-96 border p-4;
+  height: 357px;
+}
+
+.subtotal {
+  @apply flex justify-between text-xl font-bold border-b pb-4;
+}
+
+.promoDeliveryInfo {
+  @apply py-4 border-b;
+}
+
+.promo {
+  @apply border  border-black rounded-lg overflow-hidden h-14  mt-2 relative flex items-center;
+  & input {
+    @apply outline-none pl-4;
+  }
+  & button {
+    @apply rounded-none absolute top-0 right-0 w-1/3 h-full;
+    @include button-styles;
+  }
+}
+
+.delivery {
+  @apply flex justify-between mt-3;
+}
+
+.grandTotal {
+  @apply flex justify-between text-xl font-bold  py-4;
+}
+
+.totalPrice > button {
+  @include button-styles;
+  @apply w-full h-14;
+}
+
+@media (max-width: 768px) {
+  .totalPrice {
+    @apply w-full;
+  }
+}

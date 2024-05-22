@@ -12,3 +12,12 @@
     @apply scale-150;
   }
 }
+
+@media (max-width: 768px) {
+  .swiper-button-next {
+    @apply hidden;
+  }
+  .swiper-button-prev {
+    @apply hidden;
+  }
+}

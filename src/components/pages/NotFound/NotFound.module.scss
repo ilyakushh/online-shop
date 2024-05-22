@@ -1,0 +1,11 @@
+@import "../../../styles/common/index.scss";
+
+.notfound {
+  @apply flex flex-col gap-6 m-auto;
+  max-width: 500px;
+
+  & button {
+    @include button-styles;
+    @apply h-14 uppercase text-xl w-full;
+  }
+}

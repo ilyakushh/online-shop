@@ -1,0 +1,23 @@
+@import "../../../styles/common/index.scss";
+
+.signup {
+  @apply max-w-lg m-auto py-10;
+}
+
+.form {
+  @apply mt-3 flex flex-col gap-3;
+
+  & button {
+    @include button-styles;
+    @apply w-full h-14 mt-10;
+  }
+  & label:last-of-type {
+    & input {
+      @apply inline border-none w-5 h-5 mt-4  mr-3;
+    }
+  }
+}
+
+.error {
+  @apply text-red-600;
+}

@@ -1,0 +1,25 @@
+.home {
+  @apply pt-5;
+  & h2 {
+    @apply font-bold text-4xl text-center mb-5;
+  }
+}
+
+.item {
+  @apply h-full text-center;
+  & .itemDesc {
+    @apply pt-3 pb-20;
+    & h5 {
+      @apply font-bold mb-2;
+    }
+    & span {
+      @apply capitalize cursor-pointer text-xl;
+    }
+    & p {
+      @apply font-bold mt-5;
+    }
+  }
+  & img {
+    @apply max-w-full max-h-80 object-contain m-auto;
+  }
+}

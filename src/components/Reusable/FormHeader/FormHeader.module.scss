@@ -1,0 +1,8 @@
+.formHeader {
+  & h2 {
+    @apply text-5xl mb-3;
+  }
+  & span {
+    @apply text-gray-500 mb-3;
+  }
+}

@@ -1,0 +1,9 @@
+.emailField {
+  & input {
+    @apply block border  border-black rounded-lg outline-none w-full h-14 pl-4;
+  }
+}
+
+.error {
+  @apply text-red-600;
+}

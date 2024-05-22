@@ -1,0 +1,13 @@
+@import "../../../styles/common/index.scss";
+
+.sidebarMenu {
+  @apply fixed bg-white w-full  h-screen top-0 left-0 flex flex-col items-center justify-center uppercase text-3xl gap-10 overflow-hidden z-40;
+  & button {
+    @include button-styles;
+    @apply py-3 px-10;
+  }
+}
+
+.closeMenuIcon {
+  @apply absolute top-5 right-5 text-4xl;
+}

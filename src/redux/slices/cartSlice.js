@@ -48,6 +48,11 @@ export const cartSlice = createSlice({
     calculateGrandTodal: (state, action) => {
       state.grandTotal = state.subTotal + action.payload;
     },
+    clearCart: (state, action) => {
+      state.cartItems = [];
+      state.grandTotal = 0;
+      state.subTotal = 0;
+    },
   },
 });
 
@@ -58,6 +63,7 @@ export const {
   calculateGrandTodal,
   calculateSubTotal,
   removeFromCart,
+  clearCart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
